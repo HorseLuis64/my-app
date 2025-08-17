@@ -1,0 +1,71 @@
+
+body{
+    color: black;
+}
+.p-8 {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+
+.numbers {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.numbers p {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.names p {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+}
+
+
+.personas {
+  margin-bottom: 20px;
+}
+
+.personas p {
+  background-color: #fafafa;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto {
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+}
+
+.producto p {
+  margin: 5px 0;
+}

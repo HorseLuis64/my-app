@@ -1,103 +1,51 @@
-import Image from "next/image";
+import './page.css';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const lita = [1,2,3,4,5,6,7,8,9,10];
+  const nombres = ["Ana", "Luis", "María", "Carlos", "Sofía", "Javier", "Lucía", "Miguel", "Paula", "Andrés"];
+  const personas = [
+    { nombre: "Ana", apellido: "García", correo: "ana.garcia@email.com", edad: 22 },
+    { nombre: "Luis", apellido: "Martínez", correo: "luis.martinez@email.com", edad: 28 },
+    { nombre: "María", apellido: "López", correo: "maria.lopez@email.com", edad: 25 },
+    { nombre: "Carlos", apellido: "Sánchez", correo: "carlos.sanchez@email.com", edad: 30 },
+    { nombre: "Sofía", apellido: "Fernández", correo: "sofia.fernandez@email.com", edad: 27 },
+    { nombre: "Javier", apellido: "Ruiz", correo: "javier.ruiz@email.com", edad: 24 }
+  ];
+  const productos = [
+    { nombre: "Laptop Lenovo IdeaPad 3", descripcion: "Portátil con procesador Intel Core i5, 8GB RAM, 512GB SSD.", categoria: "Tecnología", cantidad: 10, precio: 2500000, url: "https://catalogo.claro.com.ec/uploads/imgs/productos/81wa00q2lm-ideapad-i3/gris/zoom/03-81wa00q2lm-ideapad-i3-gris-back.png" },
+    { nombre: "Camiseta Nike Sportswear", descripcion: "Camiseta deportiva para hombre, color negro, 100% algodón.", categoria: "Ropa", cantidad: 25, precio: 85000, url: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3e57d11d-0f56-4907-94a1-a547b098f41b/sportswear-camiseta-fgGZJH.png" },
+    { nombre: "Audífonos JBL Tune 510BT", descripcion: "Audífonos inalámbricos Bluetooth, hasta 40 horas de batería.", categoria: "Tecnología", cantidad: 15, precio: 180000, url: "https://agaval.vtexassets.com/arquivos/ids/1864186/image-b1df0fd8a58b41a58493738b96eac44d.jpg?v=638623480257900000" },
+    { nombre: "Silla Ergonómica Oficina", descripcion: "Silla con soporte lumbar, altura ajustable y ruedas.", categoria: "Hogar", cantidad: 8, precio: 320000, url: "https://ergonomus.co/cdn/shop/collections/Principal-5.jpg?v=1741811754" },
+    { nombre: "Cafetera Oster 12 Tazas", descripcion: "Cafetera eléctrica con filtro permanente y función de pausa.", categoria: "Electrodomésticos", cantidad: 12, precio: 145000, url: "https://tse3.mm.bing.net/th/id/OIP.AwfO5NB4dxW4dDb-RPbTiQHaHa" }
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  return (
+    <div className="p-8">
+      <div className="numbers">
+        {lita.map((n, i) => <p key={i}>{n}</p>)}
+      </div>
+
+      <div className="names">
+        {nombres.map((n, i) => <p key={i}>{n}</p>)}
+      </div>
+
+      <div className="personas">
+        {personas.map((p, i) => (
+          <p key={i}>nombre: {p.nombre} apellido: {p.apellido} correo: {p.correo} edad: {p.edad}</p>
+        ))}
+      </div>
+
+      <div className="productos">
+        {productos.map((n, index) => (
+          <div key={index} className="producto">
+            <img src={n.url} alt={n.nombre} />
+            <p><strong>{n.nombre}</strong></p>
+            <p>{n.descripcion}</p>
+            <p><em>{n.categoria}</em></p>
+            <p>${n.precio}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
